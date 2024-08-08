@@ -1,0 +1,40 @@
+To create an EC2 instance in AWS, follow these steps:
+
+Step 1: Sign in to AWS Management Console
+Go to the AWS Management Console.
+Log in with your AWS credentials.
+Step 2: Navigate to the EC2 Dashboard
+In the AWS Management Console, search for "EC2" in the search bar and select EC2 from the list of services.
+This will take you to the EC2 Dashboard.
+Step 3: Launch an EC2 Instance
+On the EC2 Dashboard, click on the Launch Instance button.
+You'll be taken to the "Choose an Amazon Machine Image (AMI)" page.
+Step 4: Choose an Amazon Machine Image (AMI)
+Select an AMI based on your requirements. For example, you can choose Amazon Linux 2, Ubuntu, Windows Server, etc.
+Click Select.
+Step 5: Choose an Instance Type
+Select an instance type that suits your needs. The t2.micro instance type is often used for free-tier eligibility.
+Click Next: Configure Instance Details.
+Step 6: Configure Instance Details
+In this step, you can configure various settings like the number of instances, network settings (VPC, Subnet), IAM role, and more.
+After configuring, click Next: Add Storage.
+Step 7: Add Storage
+Here you can configure the size and type of the root volume and add additional volumes if necessary.
+Click Next: Add Tags.
+Step 8: Add Tags
+Tags are key-value pairs that help you organize and identify your instances. You can add tags like Name: MyEC2Instance.
+Click Next: Configure Security Group.
+Step 9: Configure Security Group
+A Security Group acts as a virtual firewall for your instance. You can create a new Security Group or select an existing one.
+Configure the inbound rules to allow traffic. For example, to allow SSH (Linux) or RDP (Windows), you would add rules for port 22 (SSH) or port 3389 (RDP).
+Click Review and Launch.
+Step 10: Review and Launch
+Review all your settings, and then click Launch.
+You will be prompted to select an existing key pair or create a new one. This key pair is used for SSH/RDP access to the instance.
+Select the key pair, check the acknowledgment box, and click Launch Instances.
+Step 11: Access Your Instance
+Once your instance is launched, you can view it in the EC2 Dashboard under "Instances".
+You can connect to your instance using the key pair and the public IP provided by AWS. For SSH (Linux), use a terminal; for RDP (Windows), use Remote Desktop.
+Step 12: (Optional) Connect to the Instance
+For Linux/Unix:
+Use an SSH client or terminal to connect: ssh -i /path/to/your-key.pem ec2-user@public-ip
